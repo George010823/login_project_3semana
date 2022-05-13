@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="189dp"
         android:layout_height="39dp"
         android:text="Nombre"
@@ -31,9 +32,10 @@
         app:layout_constraintVertical_bias="0.481" />
 
     <EditText
+        android:id="@+id/editText_Nombre"
         android:layout_width="323dp"
         android:layout_height="39dp"
-        android:inputType="text"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +43,7 @@
         app:layout_constraintVertical_bias="0.319" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editText_Passw"
         android:layout_width="323dp"
         android:layout_height="39dp"
         android:inputType="textPassword"
