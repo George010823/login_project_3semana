@@ -1,5 +1,6 @@
 package com.example.login
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -25,6 +26,12 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "No se puede realizar la acción porque el campo Nombre es obligatorio", Toast.LENGTH_LONG).show()
             }else if (editText_Passw.getText().isEmpty()){
                 Toast.makeText(this, "No se puede realizar la acción porque el campo Contraseña es obligatorio", Toast.LENGTH_LONG).show()
+            }else{
+                var Nombre:String = editText_Nombre.text.toString()
+                val intent:Intent = Intent (this, SecondActivity::class.java)
+                intent.putExtra("Nombre", Nombre)
+                startActivity(intent)
+
             }
         }
     }
